@@ -6,6 +6,7 @@ challenging than I initially predicted, and was super fun.
 
 The palm tree exists as an object in JavaScript. The palm tree object has two important members, an array of trunk pieces, and an array of leaf pieces.
 
+## Making the Tree Sway
 To make the tree sway, the root of the tree stays in place, while the horizontal position of the top of the tree varies according to a sine function. In order for the tree to stay the same height while the top sways, it is also necessary to calculate the vertical position of the top of the tree using the pythagorean theorem. 
 
 All curved objects in the animation are created using bezier curves. The bezier curve function in p5 takes as input two reference coordinates, two endpoint coordinates, and a step variable between 0 and 1. The function outputs a coordinate located on a smooth curve between the endpoint coordinates. The step variable determines how far along this curve the output coordinate is located. A step value of zero would output a coordinate directly ontop of one of the endpoint coordinates, and a step value of one would output a coordinate ontop of the other endpoint. Step values between zero and one specify coordinates between the endpoints. 
@@ -16,5 +17,4 @@ To overcome this and create the tree trunk, I had to make approximations. From t
 
 In the draw loop, I repeat this process to update the positions of each trunk piece. Then, I instruct each trunk piece to draw itself. I subsequently translate each leaf piece to its new location ontop of the tree, and tell each leaf piece to draw itself. 
 
-
-
+To make this whole project responsive and interactive, I allowed sliders and window resizes to delete the old palm tree and create a new one using variables that correspond to slider positions and window dimensions. Since only p5 knows where the tree is, I also must create the buttons and sliders in p5 and adjust their locations according to window dimensions when the window is resized. 
