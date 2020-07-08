@@ -156,8 +156,7 @@ function loaded(){
 	tameImpala = createButton("Play a Fast Song");
 	tameImpala.id('tameImpala')
 	tameImpala.mousePressed(function() { playSong(0);});
-	
-	
+
 	oklou = createButton("Play a Slow Song");
 	oklou.id('oklou')
 	oklou.mousePressed(function() { playSong(1);});
